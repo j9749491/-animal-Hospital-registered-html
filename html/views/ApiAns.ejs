@@ -1,0 +1,35 @@
+<% include header3 %>
+  <script>
+  
+  
+  </script>
+  <strong><article class="col-lg-8 col-sm-7">
+    <h1>查詢結果 共<%= data.length %> 筆</h1>
+        <p>
+        <table>
+            <tr>
+                <th>醫院名稱</th>
+                <th>連絡電話</th>
+                <th>地址</th>
+            </tr>
+          <% for ( var i = 0 ; i < data.length ; i++){ %>
+            <tr>
+                <td>
+                    <%= data[i].name %>
+                </td>
+                <td>
+                    <%= data[i].Tel  %>
+                </td>
+                <td>
+                    <%= data[i].address  %>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+           
+        </p>
+      </article></strong>
+      
+      </div>
+
+<% include footer %>

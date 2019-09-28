@@ -1,0 +1,64 @@
+.bgimage{
+  background-color: #CCBBFF;
+  height:150px;
+  padding-top: 60px;
+}
+body{
+  background-color: #CCCCFF;
+}
+footer{
+    /* 設定footer絕對位置在底部 */
+    position: absolute;
+    bottom: 0;
+    /* 展開footer寬度 */
+    width: 101.5%;
+    background-color: #9F88FF;
+    color: #FFFF00;
+}
+.navbar-default {
+  background-color: #9F88FF;
+}
+.navbar-default .navbar-brand {
+  color: #FFFF00;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #FFFF00;
+}
+.navbar-default .navbar-text {
+  color: #FFFF00;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #FFFF00;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFFF00;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color:  #FFFF00;
+  background-color:  #7744FF;
+}
+.nav.nav-pills {
+  background-color: #9F88FF;
+}
+.nav.nav-pills > li > a {
+  color: #FFFF00;
+}
+.nav.nav-pills > li > a:hover,
+.nav.nav-pills > li > a:focus {
+  color: #E8CCFF;
+}
+
+.nav.nav-pills > li > a:hover,
+.nav.nav-pills > li > a:focus {
+  color: #FFFF00;
+  background-color: #CCBBFF;
+}
+
+.nav.nav-pills > .active > a
+{
+  background-color: #CCBBFF;
+}

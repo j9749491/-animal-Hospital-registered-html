@@ -1,0 +1,60 @@
+<% include header4 %>
+  <div class="container">
+  <% for ( var i = 0 ; i < data[1].length ; i++){ %>
+  <h2 class="col-sm-offset-4">掛號明細<%= i+1 %></h2>
+
+  <form class="form-horizontal" >
+        <div class="form-group">
+          <label for="put" class="control-label col-sm-1 col-sm-offset-4">帳號：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="put" class="control-label"><%= data[1][0].id  %></label>
+            </div>
+          </div>
+           <div class="form-group">
+          <label for="name" class="control-label col-sm-1 col-sm-offset-4">姓名：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="name" class="control-label"><%= data[0][0].name  %></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="sex" class="control-label col-sm-1 col-sm-offset-4">性別：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="sex" class="control-label"><%= data[0][0].sex  %></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="age" class="control-label col-sm-1 col-sm-offset-4">年齡：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="age" class="control-label"><%= data[0][0].age  %></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-1 col-sm-offset-4">醫院：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="name" class="control-label"><%= data[1][i].Rname  %></label>
+            </div>
+          </div>
+          <div class="form-group">
+          <label for="put" class="control-label col-sm-1 col-sm-offset-4">日期：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="put" class="control-label"><%= data[1][i].RDate  %></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="sex" class="control-label col-sm-1 col-sm-offset-4">時段：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="sex" class="control-label"><%= data[1][i].Rtime  %></label>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="age" class="control-label col-sm-1 col-sm-offset-4">編號：&nbsp</label>
+            <div class="col-sm-7">
+               <label for="age" class="control-label"><%= data[1][i].Rnumber  %></label>
+            </div>
+          </div>
+        
+          
+          
+    </form>
+  <% } %>
+    </div>

@@ -1,0 +1,133 @@
+<% include header4 %>
+
+<script>
+  
+  function Click(form1){
+  if (form1.password.value.length < 6  ) { 
+        alert("密碼輸入長度太短，至少輸入6個字");
+        form1.password.onFocus;
+        return false;
+      }
+     
+     }
+
+  function Click3(form1){
+  if (form1.password.value != form1.repassword.value) { 
+        alert("兩次輸入密碼輸入不同，請重新輸入一次");
+        form1.password.onFocus;
+        return false;
+    
+      }
+     }
+  function Click2(form1){
+  var ans='';
+  if (form1.name.value != '' ) { 
+        ans += " 姓名: " + form1.name.value
+      }
+      else ans+='';
+  <% for ( var i = 0 ; i < data.length ; i++){ %>
+   if (form1.Id.value == '<%= data[i].id %>' ) { 
+         alert("此帳號已被使用");
+         form1.Id.onFocus;
+      }
+      else ans+='';
+  <% } %>
+
+     if (form1.sex.value !=''  ) { 
+        ans += " 性別: " + form1.sex.value
+      }
+    <% for ( var i = 0 ; i < data.length ; i++){ %>
+   if (form1.phone.value == '<%= data[i].phone %>' ) { 
+         alert("此號碼已被註冊");
+         form1.Id.onFocus;
+      }
+  <% } %>
+     if (form1.age.value !=''  ) { 
+        ans += " 年齡: " + form1.age.value
+      }
+     if (form1.password.value !=''  ) { 
+      if (Click(form1) != false ) {
+        if (form1.repassword.value !='') {
+          if (Click3(form1) !=false) {
+            ans += " 密碼OK "
+          }
+        }
+        
+      }
+      }
+      return ans;
+     }
+  </script>
+
+<div class="container">
+  <h2 class="col-sm-offset-3">註冊</h2>
+  <form class="form-horizontal" method="post" role="form" >
+        <div class="form-group row">
+
+            <div class="col-xs-10">
+              <input type="hidden" name="result" id="result" placeholder="這裡是結果，不能打字~~~" style="width:600px;height:30px;" readonly="readonly" required>  
+              </div>
+            </div>
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-1 col-sm-offset-4">帳號：&nbsp</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" style="width:200px;height:30px;" name="Id"  id="Id" placeholder="帳號"  
+               onChange="this.form.result.value = Click2(this.form)" required>
+            </div>
+          </div>
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-1 col-sm-offset-4">姓名：&nbsp</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" style="width:200px;height:30px;" name="name"  id="name" placeholder="姓名"  onBlur="this.form.result.value = Click2(this.form)" required>
+            </div>
+          </div>
+      <fieldset class="form-group">
+            <div class="row">
+              <label for="sex" class="control-label col-sm-1 col-sm-offset-4">性別：</label>
+                <div class="col-sm-7">
+                    <div class="form-check">
+                      <input type="radio" name="sex" id="sex1" value="男生" onBlur="this.form.result.value = Click2(this.form)"><label class="form-check-label" for="gridRadios1" required>男生</label><BR>
+                    </div>
+                <div class="form-check">
+                      <input type="radio" name="sex" id="sex2" value="女生"><label class="form-check-label" for="gridRadios2" onBlur="this.form.result.value = Click2(this.form)" required>女生</label>
+                </div>
+              </div>
+            </div>
+          <div class="form-group">
+          <label for="name" class="control-label col-sm-1 col-sm-offset-4">電話：</label>
+            <div class="col-sm-7">
+              <input type="text" class="form-control" style="width:200px;height:30px;" name="phone"  id="phone" placeholder="電話" onBlur="this.form.result.value = Click2(this.form)"  required>
+            </div>
+          </div>
+          <div class="form-group ">
+            <label for="age" class="control-label col-sm-1 col-sm-offset-4">年齡：</label>
+              <div class="col-sm-7">
+                <input type="age" class="form-control" style="width:200px;height:30px;" name="age"  id="age" placeholder="年齡" onBlur="this.form.result.value = Click2(this.form)" required>
+              </div>
+            </div>
+          <div class="form-group ">
+            <label for="passwoed" class="control-label col-sm-1 col-sm-offset-4 ">密碼：</label>
+              <div class="col-sm-7">
+                <input type="password" class="form-control" style="width:200px;height:30px;" name="password" placeholder="請輸入密碼" id="password" maxlength="20" size="20" onChange="this.form.result.value = Click2(this.form)" required>
+              </div>
+            </div>
+          <div class="form-group ">
+            <label for="repassword" class="control-label col-sm-1 col-sm-offset-4">確認：</label>
+              <div class="col-sm-7">
+                <input type="password" class="form-control" style="width:200px;height:30px;" name="repassword" id="repassword" placeholder="請再次輸入密碼" onChange="this.form.result.value = Click2(this.form)" >
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-sm-offset-5 col-sm-7 form-group">
+            <input type="submit"  value="送出" class="btn btn-default">
+            </div>    
+          </form>
+</div>
+
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>  
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+<% include footer %>

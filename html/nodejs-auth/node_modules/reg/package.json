@@ -1,0 +1,65 @@
+{
+  "_from": "reg",
+  "_id": "reg@0.1.1",
+  "_inBundle": false,
+  "_integrity": "sha1-jccHqbaDVPNW5eeDjbWWMOdzvUc=",
+  "_location": "/reg",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "reg",
+    "name": "reg",
+    "escapedName": "reg",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/reg/-/reg-0.1.1.tgz",
+  "_shasum": "8dc707a9b68354f356e5e7838db59630e773bd47",
+  "_spec": "reg",
+  "_where": "C:\\Users\\j9749\\Downloads\\作業\\資料表傳送\\nodejs-auth",
+  "author": {
+    "name": "Paul Vorbach",
+    "email": "paul@vorb.de",
+    "url": "http://vorb.de/"
+  },
+  "bugs": {
+    "url": "https://github.com/pvorb/node-reg/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "mongodb": ">=0.9.9"
+  },
+  "deprecated": false,
+  "description": "A registry for documents",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "homepage": "https://github.com/pvorb/node-reg#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://vorb.de/license/mit.html"
+    }
+  ],
+  "main": "./reg.js",
+  "name": "reg",
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pvorb/node-reg.git"
+  },
+  "tags": [
+    "index",
+    "db",
+    "blog",
+    "cms"
+  ],
+  "version": "0.1.1"
+}

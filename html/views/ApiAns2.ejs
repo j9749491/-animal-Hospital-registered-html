@@ -1,0 +1,46 @@
+<% include header2 %>
+  <script>
+  
+  
+  </script>
+  <article class="col-lg-8 col-sm-7">
+    <h1>掛號</h1>
+        <p>
+          <div class="form-group row">
+          <form method="post" role="form"  >
+            <label for="class" class="col-sm-2 col-form-label">請選擇醫院：</label>
+             
+              <div class="col-sm-12">
+               
+                  <select  name=hname id="hname" size=1 required>
+                  <% for (var i = 0; i < data.length; i++){ %>
+                        <option value=<%= data[i].name %>><%= data[i].name %>
+
+                   <% } %>
+                  </select>
+
+              </div>
+            <label for="class" class="col-sm-2 col-form-label">請選擇時段：</label>
+                <div class="col-sm-12">
+                    <select  name=time id="time" size=1 required>
+                      <option value=上午>上午
+                      <option value=下午>下午
+                    </select>
+                </div>
+              <label for="name" class="col-sm-2 col-form-label">請選擇日期：</label>
+             <div class="col-sm-12">
+              <input type="date" class="form-control" style="width:200px;height:30px;" name="Date1" id="Date1" required>
+              <br>
+              <input type="submit"  value="送出" class="btn btn-default ">
+            </div>
+          
+          </form>
+            </div>
+           
+        </p>
+        <div class="clearfix visible-xs visible-lg"></div>
+      </article>
+      
+      </div>
+
+<% include footer %>
