@@ -15,7 +15,7 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "expresss": "0.0.0",
-    "fast-csv": "^2.4.1",
+    "fast-csv": "^4.3.6",
     "foreach": "^2.0.5",
     "get-json": "^1.0.1",
     "morgan": "^1.9.1",
